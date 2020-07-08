@@ -9,7 +9,7 @@ const remainingTries = document.querySelector('#remaining-tries');
 const hiLow = document.querySelector('#hi-low');
 const winLose = document.querySelector('#win-lose');
 const winCount = document.querySelector('#win-count');
-const lossCount = document.querySelector('loss-count');
+const lossCount = document.querySelector('#loss-count');
 const triesLeft = document.querySelector('#turn-count');
 
 
@@ -37,20 +37,26 @@ playButton.addEventListener('click', () => {
         triesLeft.textContent = '';
         winCount.textContent = ('you have ' + wins + ' wins');
         wins ++;
-        tries --;
 
     } else if (result === -1) {
+        tries --;
         hiLow.textContent = 'Too low Joe!';
         triesLeft.textContent = (tries + ' tries left!');
-        winCount.textContent = ('you have ' + wins + ' wins'); 
-        tries --;
+         
+       
 
     } else { 
+        tries --;
         hiLow.textContent = 'Too high guy!';
         triesLeft.textContent = (tries + ' tries left!');
-        winCount.textContent = ('you have ' + wins + ' wins');
-        tries --;
+        
+    }
 
+    if (tries === 0) {
+        winLose.textContent = 'YOU ARE A LOSER!';
+        losses ++;
+        lossCount.textContent = ('you have ' + losses + ' losses!');
+        winCount.textContent = ('you have ' + wins + ' wins');
     }
     console.log(tries);
     console.log(guess);
