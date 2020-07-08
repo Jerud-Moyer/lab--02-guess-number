@@ -3,14 +3,14 @@
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('does it recognize identicle number', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = true;
+    const userNumber = 9;
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = false;
+    const secretNumber = 5;
 
     //Expect
     // Make assertions about what is expected versus the actual result
