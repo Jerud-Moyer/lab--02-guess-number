@@ -33,6 +33,9 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: solid 8px cadetblue;
+    border-radius: 15px;
+    padding: 25px;
 }
 
 .intro {

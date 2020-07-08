@@ -5,7 +5,6 @@ import { compareNumbers } from "./numUtils.js";
 const guessField = document.querySelector('#user-number');
 
 const playButton = document.querySelector('#but-ton');
-const remainingTries = document.querySelector('#remaining-tries');
 const hiLow = document.querySelector('#hi-low');
 const winLose = document.querySelector('#win-lose');
 const winCount = document.querySelector('#win-count');
@@ -32,11 +31,12 @@ playButton.addEventListener('click', () => {
     
     
     if (result === 0) {
+        wins ++;
         winLose.textContent = 'Hooray your a Wiener!';
         hiLow.textContent = '';
         triesLeft.textContent = '';
         winCount.textContent = ('you have ' + wins + ' wins');
-        wins ++;
+        
 
     } else if (result === -1) {
         tries --;
