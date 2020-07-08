@@ -19,13 +19,24 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-image: url(../hotdog.jpg);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    margin: 50px;
+    color: cadetblue;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    border: solid 8px cadetblue;
+    border-radius: 15px;
 }
 
 main {
@@ -36,6 +47,7 @@ main {
     border: solid 8px cadetblue;
     border-radius: 15px;
     padding: 25px;
+    background-color: var(--color2);
 }
 
 .intro {
@@ -51,6 +63,19 @@ button {
     width: 100px;
     background-color: cadetblue;
     margin: 25px;
+    font-size: larger;
+}
+
+#but-ton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#try-again {
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .result {
@@ -67,4 +92,8 @@ button {
 
 input {
     margin: 25px;
+}
+
+span {
+    font-size: larger;
 }

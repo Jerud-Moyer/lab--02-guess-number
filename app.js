@@ -3,8 +3,8 @@
 import { compareNumbers } from "./numUtils.js";
 
 const guessField = document.querySelector('#user-number');
-
 const playButton = document.querySelector('#but-ton');
+const resetButton = document.querySelector('#try-again');
 const hiLow = document.querySelector('#hi-low');
 const winLose = document.querySelector('#win-lose');
 const winCount = document.querySelector('#win-count');
@@ -36,6 +36,8 @@ playButton.addEventListener('click', () => {
         hiLow.textContent = '';
         triesLeft.textContent = '';
         winCount.textContent = ('you have ' + wins + ' wins');
+        playButton.style.display = 'none';
+        resetButton.style.display = 'flex';
         
 
     } else if (result === -1) {
@@ -55,19 +57,35 @@ playButton.addEventListener('click', () => {
     if (tries === 0) {
         winLose.textContent = 'YOU ARE A LOSER!';
         losses ++;
+        playButton.style.display = 'none';
+        resetButton.style.display = 'flex';
         lossCount.textContent = ('you have ' + losses + ' losses!');
         winCount.textContent = ('you have ' + wins + ' wins');
     }
     console.log(tries);
     console.log(guess);
     
-
+    resetButton.addEventListener('click', () => {
+        lossCount.textContent = ('you have ' + losses + ' losses!');
+        winCount.textContent = ('you have ' + wins + ' wins');
+        winLose.textContent = ('');
+        hiLow.textContent = ('');
+        guessField.value = ('');
+        playButton.style.display = 'flex';
+        resetButton.style.display = 'none';
+        
+        
+       
+        
+        
+    });
+    
 
 
            
     
     
-    });
+});
     
 
 
