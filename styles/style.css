@@ -1,0 +1,99 @@
+
+body {
+    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
+    --color1: hsla(349, 69%, 76%, 1);
+    --color2: hsla(207, 67%, 44%, 1);
+    --color3: hsla(200, 61%, 56%, 1);
+    --color4: hsla(187, 41%, 94%, 1);
+    --color5: hsla(170, 28%, 95%, 1);
+
+    /* --color1: hsla(45, 86%, 83%, 1);
+    --color2: hsla(135, 65%, 98%, 1);
+    --color3: hsla(315, 37%, 86%, 1);
+    --color4: hsla(45, 73%, 98%, 1);
+    --color5: hsla(224, 40%, 79%, 1); */
+    
+    --header-height: 80px;
+    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    --gutter: 30px;
+    --footer-height: 25px;
+    
+    font-family: 'Titillium Web', sans-serif;
+    background-image: url(../hotdog.jpg);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    margin: 50px;
+    color: cadetblue;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 8px cadetblue;
+    border-radius: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 8px cadetblue;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: var(--color2);
+}
+
+.intro {
+    font-size: 50px;
+}
+
+#rules {
+    font-size: larger;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    background-color: cadetblue;
+    margin: 25px;
+    font-size: larger;
+}
+
+#but-ton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#try-again {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+#win-lose {
+    font-size: 50px;
+    text-shadow: black 2px 2px;
+    color: crimson;
+}
+
+input {
+    margin: 25px;
+}
+
+span {
+    font-size: larger;
+}
