@@ -27,9 +27,6 @@ playButton.addEventListener('click', () => {
     const guess = Number(guessField.value);
     const result = compareNumbers(guess, correctNumber);
     
-    console.log(correctNumber);
-    
-    
     if (result === 0) {
         wins ++;
         winLose.textContent = 'Hooray your a Wiener!';
@@ -51,9 +48,7 @@ playButton.addEventListener('click', () => {
         tries --;
         hiLow.textContent = 'Too high guy!';
         triesLeft.textContent = (tries + ' tries left!');
-        
     }
-
     if (tries === 0) {
         winLose.textContent = 'YOU ARE A LOSER!';
         losses ++;
@@ -62,9 +57,6 @@ playButton.addEventListener('click', () => {
         lossCount.textContent = ('you have ' + losses + ' losses!');
         winCount.textContent = ('you have ' + wins + ' wins');
     }
-    console.log(tries);
-    console.log(guess);
-    
     resetButton.addEventListener('click', () => {
         lossCount.textContent = ('you have ' + losses + ' losses!');
         winCount.textContent = ('you have ' + wins + ' wins');
@@ -73,17 +65,9 @@ playButton.addEventListener('click', () => {
         guessField.value = ('');
         playButton.style.display = 'flex';
         resetButton.style.display = 'none';
-        
-        
-       
-        
-        
+        tries = 4;
+        triesLeft.textContent = tries;
     });
-    
-
-
-           
-    
     
 });
     

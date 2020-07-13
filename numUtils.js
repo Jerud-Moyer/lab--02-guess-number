@@ -6,5 +6,4 @@ export function compareNumbers(guess, correctNumber) {
     } else {
         return 1; 
     }
-    
 }
