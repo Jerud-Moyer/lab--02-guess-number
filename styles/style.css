@@ -76,6 +76,8 @@ button {
     display: none;
     justify-content: center;
     align-items: center;
+    height: 100px;
+    width: 150px;
 }
 
 .result {
